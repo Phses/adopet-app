@@ -45,7 +45,7 @@ function Navbar() {
               <li className='navBar__item' onClick={() => navigate('/mensagem')}>
                 <MensageIcon width='20px' height='20px'/>
               </li>
-              {pathMatchRoute('/home') && <li className='navBar__item' onClick={() => navigate('/Perfil')}>
+              {pathMatchRoute('/home') && <li className='navBar__item pushRight' onClick={() => navigate('/Perfil')}>
                 {loggedIn ? 
                   <div className='photo-box-navBar'>
                     <img className='photo' src={srcImg}/>
@@ -54,7 +54,7 @@ function Navbar() {
                     <PersonIcon  width='30px' height='30px' fill='#36D6AD'/>
                    </div>}
               </li>} 
-              {pathMatchRoute('/mensagem') && <li className='navBar__item' onClick={() => navigate('/Perfil')}>
+              {pathMatchRoute('/mensagem') && <li className='navBar__item pushRight' onClick={() => navigate('/Perfil')}>
               {loggedIn ? 
                 <div className='photo-box-navBar'>
                   <img className='photo' src=''/>
@@ -63,7 +63,7 @@ function Navbar() {
                   <PersonIcon  width='30px' height='30px' fill='#36D6AD'/>
                  </div>}
               </li>} 
-              {pathMatchRoute('/perfil') && <li className='navBar__item' onClick={() => navigate('/Perfil')}>
+              {pathMatchRoute('/perfil') && <li className='navBar__item pushRight' onClick={() => navigate('/Perfil')}>
               {loggedIn ? 
                   <div className='photo-box-navBar'>
                     <img className='photo' src=''/>

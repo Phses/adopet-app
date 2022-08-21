@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {getAuth, updateProfile, signOut} from 'firebase/auth'
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage'
 import {db} from '../firebase.config'
@@ -260,6 +260,8 @@ function Perfil() {
           disabled={!changeDetails}
           value={cidade}
           onChange={onMutate}/>
+
+          <div className="lorem50"></div>
           
           <label className='input-label' htmlFor='sobre'>Sobre</label>
           <textarea 
@@ -274,11 +276,13 @@ function Perfil() {
           value={sobre}
           onChange={onMutate}/>
 
-          <button style={{margin: '20px 0'}} className='btn__btn-primary' type='submit'>Salvar</button>
+          <button style={{margin: '20px auto'}} className='btn__btn-primary' type='submit'>Salvar</button>
         </form>
         <div className='logout__area'>
-          <p className='text__content'>Deseja sair?</p>
-          <button onClick={userSignOut}className='btn__logout'>Sair</button>
+          <Link to='/messages'> 
+            <div className='btn__btn-secondary'>Ver suas mensagens</div>
+          </Link>
+          <button onClick={userSignOut}className='btn__btn-secondary'>Sair</button>
         </div>
       </main>
     </div>

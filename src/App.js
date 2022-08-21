@@ -12,6 +12,7 @@ import Mensagem from './pages/Mensagem'
 import Perfil from './pages/Perfil'
 import CreateListing from './pages/CreateListing';
 import PrivateRoute from './components/PrivateRoute';
+import Menssagens from './pages/Menssagens';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             </Route>
             <Route path='/home' element={<Home />}/>
             <Route path='/create-listing' element={<CreateListing />}/>
+            <Route path='/mensagens-recebidas' element={<Menssagens />}/>
           </Routes>
           <Footer/>
           </div>

@@ -182,6 +182,16 @@ function CreateListing() {
             onChange={onMutate}
             required
             />
+          <label className='input-label' htmlFor='size'>Temperamento</label>
+          <input
+            type='text'
+            className='input-pet'
+            id='temperament'
+            placeholder='Diga como e o temperamento do pet'
+            value={temperament}
+            onChange={onMutate}
+            required
+            />
           <label className='input-label' htmlFor='location'>Localizacao</label>
           <textarea
             type='text'
@@ -202,7 +212,7 @@ function CreateListing() {
             required
             onChange={onMutate}
             />
-          <button style={{margin: '20px 0'}} type='submit' className='btn__btn-primary'>Cadastrar</button>
+          <button style={{margin: '20px auto'}} type='submit' className='btn__btn-primary'>Cadastrar</button>
         </form>
       </main>
     </div>

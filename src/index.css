@@ -13,6 +13,8 @@
   --font-primary: 'Poppins', sans-serif;
 }
 
+/* Estilo geral */
+
 li {
   list-style: none;
 }
@@ -31,11 +33,25 @@ a, button {
   color: white;
   font-weight: 600;
   border-radius: 10px;
+  width: 50%;
+}
+
+.btn__btn-secondary {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 28px;
+  border: 2px solid #3772FF;
+  color: #737380;
+  font-weight: 600;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 img {
   max-width: 100%;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -51,16 +67,20 @@ input {
   color: #737380;
   font-size: 12px;
 }
+
 input::placeholder {
   font-family: var(--font-primary);
   color: #bcbcbc;
   font-size: 12px;
   text-align: center;
 }
+
 input:focus {
   outline: 2px solid #36d6ad;
   border: none;
 }
+
+
 .wrapper {
   border: 1px solid transparent;
   width: 100%;
@@ -80,6 +100,20 @@ input:focus {
   z-index: 3;
 }
 
+@media (min-width: 600px) {
+  .wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 590px;
+    height: 400px;
+    background: url('./assets/images/Forma\ 1.png')no-repeat;
+    background-size: contain;
+    z-index: -2;
+  }
+} 
+
 .container.background__color::before {
   content: '';
   position: absolute;
@@ -97,8 +131,6 @@ header {
   z-index: 5;
 }
 
-
-
 .container::after {
   content: '';
   position: absolute;
@@ -114,6 +146,7 @@ header {
 .container {
   width: 100%;
   height: 100%;
+
 }
 
 .container__content {
@@ -133,56 +166,6 @@ header {
   color: #3772FF;
   max-width: 60%;
 }
-
-
-.navBar {
-  margin: 0 auto;
-  margin-bottom: 85px;
-  width: 100%;
-}
-
-.navBar__list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 60px;
-  margin-top: 50px;
-  width: 100%;
-}
-
-.circleIcon {
-  display: flex;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #36d6ad;
-  margin-left: 200px;
-}
-
-.navBar__item {
-  cursor: pointer;
-}
-
-.photo-box-navBar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-
-
-.logo {
-  height: 24px;
-  margin-left: 50px;
-}
-
-@media (max-width: 600px) {
-  .logo {
-    display: none;
-  }
-}
-
 
 .ilustracao1 {
   transform: translateY(20px);
@@ -211,31 +194,6 @@ header {
   background: url('./assets/images/Forma3.png')no-repeat;
   background-size: contain;
   z-index: -4;
-}
-.input-password {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.visibilityIcon {
-  cursor: pointer;
-  width: 20px;
-  position: absolute;
-  top: 40px;
-  right: 10px;
-}
-
-.errorMessage {
-  color: #fc7071;
-  font-size: 0.6rem;
-  align-self: flex-start;
-  margin-top: 8px;
-}
-
-.text__content {
-  color: var(--primary-color);
-  font-size: 1rem;
 }
 
 .loadingSpinnerContainer {
@@ -268,7 +226,123 @@ header {
   }
 }
 
+/* nav bar */
+
+.navBar {
+  margin: 0 auto;
+  margin-bottom: 85px;
+  width: 90%;
+}
+
+@media (min-width: 600px) {
+  .navBar {
+    margin-bottom: 110px;
+  }
+}
+
+.navBar__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.circleIcon {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #36d6ad;
+}
+
+.navBar__item {
+  cursor: pointer;
+}
+.navBar__item.pushRight {
+  margin-left: auto;
+}
+
+.photo-box-navBar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+ 
+}
+
+
+
+.logo {
+  height: 24px;
+  margin-left: 50px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}
+
+/* Login */
+
+.input-password {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.visibilityIcon {
+  cursor: pointer;
+  width: 20px;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.errorMessage {
+  color: #fc7071;
+  font-size: 0.6rem;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+.text__content {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+
 /* Home page */
+
+.availablePets {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .availablePets {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width: 600px) {
+  .availablePets {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .availablePets {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
 .pet-item {
   display: flex;
   margin-bottom: 16px;
@@ -314,6 +388,7 @@ header {
 
 .addPet {
   display: flex;
+  gap: 20px;
   text-align: start;
   margin-bottom: 20px;
 }
