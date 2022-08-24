@@ -24,7 +24,7 @@ function App() {
             <Route path='/' element={<Inicial />}/>
             <Route path='/cadastro' element={<Cadastro />}/>
             <Route path='/log-in' element={<LogIn />}/>
-            <Route path='/mensagem' element={<Mensagem />}/>
+            <Route path='/mensagem/:listingId' element={<Mensagem />}/>
             <Route path='/perfil' element={<PrivateRoute />}>
               <Route path='/perfil' element={<Perfil/>}/> 
             </Route>

@@ -80,6 +80,21 @@ input:focus {
   border: none;
 }
 
+textarea {
+  padding: 10px ;
+  max-width: 100%;
+  margin-top: 4px;
+  border: 1px solid #737380;
+  border-radius: 10px;
+  color: #737380;
+  font-family: var(--font-primary);
+  font-size: 12px;
+}
+
+textarea:focus {
+  outline: 2px solid #36d6ad;
+  border: none;
+}
 
 .wrapper {
   border: 1px solid transparent;
@@ -150,7 +165,8 @@ header {
 }
 
 .container__content {
-  width: 80%;
+  width: 70%;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -524,19 +540,11 @@ header {
   align-items: flex-start;
 }
 
-.btn__logout {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #fc7071;
-  color: white;
-  font-weight: 600;
-  transition: opacity 0.4s ease;
-  border-radius: 15px;
-  margin: 12px 0;
-}
+/* Mensage form */
 
-.btn__logout:hover {
-  opacity: 0.6;
+#mensagem {
+  width: 80%;
+  max-width: 600px;
 }
 
 footer {

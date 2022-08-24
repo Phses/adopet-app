@@ -151,6 +151,7 @@ function Perfil() {
               case 'running':
                 console.log('Upload is running');
                 break;
+              default: break
             }
           }, 
            (error) => {
@@ -217,7 +218,6 @@ function Perfil() {
       <main id='profile'>
         <form className='form__profile' onSubmit={onSubmit}>
           <div className='profile__photo-container'>
-
             <label className='input-label' htmlFor='foto'>Foto</label>
             <div className='photo-box'>
               {fotoUrl ?
@@ -279,7 +279,7 @@ function Perfil() {
           <button style={{margin: '20px auto'}} className='btn__btn-primary' type='submit'>Salvar</button>
         </form>
         <div className='logout__area'>
-          <Link to='/messages'> 
+          <Link to='/menssagens-recebidas'> 
             <div className='btn__btn-secondary'>Ver suas mensagens</div>
           </Link>
           <button onClick={userSignOut}className='btn__btn-secondary'>Sair</button>

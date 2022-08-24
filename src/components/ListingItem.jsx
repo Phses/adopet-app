@@ -20,7 +20,7 @@ function ListingItem({id, data}) {
           <li>{data.temperament}</li>
         </ul>
         <p className='pet-item__location'>{data.location}</p>
-        <Link to={`/message/${data.userRef}`} className='pet-item__message'>
+        <Link to={`/mensagem/${id}`} className='pet-item__message'>
           <img className='message-icon' src={iconeMessage} alt='Message icon'/>
           <small>Fale com responsavel</small>
         </Link>
